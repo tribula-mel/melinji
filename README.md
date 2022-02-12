@@ -1,4 +1,4 @@
-History
+# History
 
 In my day to day work I tend to keep notes. In the beginning I used paper
 for the purpose. This approach had one disadvantage being the searchability.
@@ -22,7 +22,7 @@ creates the vim tags file. With this approach one could search the notes
 within the vim with the regular ctrl-] / ctrl-t key strokes.
 
 
-The notes file structure
+# The notes file structure
 
 During a day of work I tend to tackle different topics. Thus I try to group
 the information that goes into a notes file into logical entries, each
@@ -31,17 +31,19 @@ a subject line. I tend to keep it short and as meaningful as possible. This
 subject line gets tagged with one or more tags, depending on the information
 that would follow. An example notes file entry would look like:
 
+```
 -| github account information (MEL_ACCOUNT_INFO)
 
    user name: ttt
    password : ttt
+```
 
 The subject line doesn't have to start with the "-|" string, nor the tag
 has to be in the brackets. I like to keep the tag at the end of the subject
 line, and if there are more tags applicable I separate with the '/'.
 
 
-The melinji tag file structure
+# The melinji tag file structure
 
 The melinji takes a tag file as an input, were all the user tags are defined.
 At this stage of development this file has a very simple structure, each
@@ -49,7 +51,17 @@ line should have one tag defined. There are no comments allowed, or any other
 formatting. The name of the tag file is not of importance, and the example
 content could look like:
 
+```
 MEL_ACCOUNT_INFO
 MEL_INFO
 MEL_USE
 MEL_BACKUP
+```
+
+# Important note
+
+The vim's tag file has to be sorted. I do the sort inside vim with the following:
+
+```vim
+:1,%!sort
+```
